@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 设置 -->
+	<settings>
+		<!-- 是否缓存 -->
+		<setting name="cacheEnabled" value="true"/>
+		<!-- 延迟加载全局开关 -->
+		<setting name="lazyLoadingEnabled" value="false"/>
+		<!-- 是否允许单一语句返回多结果集（需要兼容驱动） -->
+		<setting name="multipleResultSetsEnabled" value="true"/>
+		<!-- 使用列标签代表列名 -->
+		<setting name="useColumnLabel" value="true"/>
+		<!-- 允许JDBC支持自动生成主键，是否自动生成主键 -->
+		<setting name="useGeneratedKeys" value="false"/>
+		<!-- 指定MyBatis应如何自动映射列到字段或属性，NONE:取消自动映射；PARTIAL:只会自动映射，没有定义嵌套结果集合映射结果集；FULL:自动映射任意复杂结果集（无论是否嵌套） -->
+		<setting name="autoMappingBehavior" value="PARTIAL"/>
+		<!-- 指定自动映射当中未知列时的行为 -->
+		<setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>
+		<!-- 配置默认执行器 -->
+		<setting name="defaultExecutorType" value="SIMPLE"/>
+		<!-- 设置超时时间 -->
+		<setting name="defaultStatementTimeout" value="25"/>
+		<!-- 设置数据库驱动程序默认返回的条数限制 -->
+		<setting name="defaultFetchSize" value="100"/>
+		<!-- 允许在嵌套语句中是否禁用分页 -->
+		<setting name="safeRowBoundsEnabled" value="false"/>
+		<!-- 是否开启自动驼峰命名规则映射 -->
+		<setting name="mapUnderscoreToCamelCase" value="false"/>
+		<!-- MyBatis利用本地缓存机制防止循环引用和加速重复嵌套查询 -->
+		<setting name="localCacheScope" value="SESSION"/>
+		<!-- 为空值指定JDBC类型 -->
+		<setting name="jdbcTypeForNull" value="OTHER"/>
+		<!-- 指定哪个对象的方法触发一次延迟加载 -->
+		<setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>
+		<!-- 设置log4j控制台输出sql等信息 -->
+		<!-- <setting name="lazyLoadingEnabled" value="false" /> -->
+		<!-- <setting name="logImpl" value="LOG4J" /> -->
+	</settings>
+	<!-- 类型命名 -->
+	<typeAliases>
+		<!-- 别名 -->
+		<!-- <typeAlias alias="role" type="org.shawn.study.springmvc.modules.demo.entity.Role"/> -->
+		<!-- <package name="com.myproject.shawn.demo.entity"/> -->
+		<typeAlias alias="Integer" type="java.lang.Integer" />
+        <typeAlias alias="Long" type="java.lang.Long" />
+        <typeAlias alias="HashMap" type="java.util.HashMap" />
+        <typeAlias alias="LinkedHashMap" type="java.util.LinkedHashMap" />
+        <typeAlias alias="ArrayList" type="java.util.ArrayList" />
+        <typeAlias alias="LinkedList" type="java.util.LinkedList" />
+	</typeAliases>
+
+	<!-- 映射器 -->
+	<!-- <mappers>
+		resource可以xml和接口在不同包名下
+		<mapper resource="org/shawn/study/springmvc/modules/mvc/mapper/xml/RoleMapper.xml"/>
+		用包名接口和xml必须在同一包名下
+		<package name="org/shawn/study/springmvc/modules/mvc/mapper"/>
+	</mappers> -->
+</configuration>
