@@ -1,10 +1,15 @@
 package com.myproject.shawn.demo.entity;
 
+import java.io.Serializable;
+
 /** 
  * @author linx
  * @date 2019年4月22日下午5:15:20
  */
-public class User {
+public class User implements Serializable{
+	
+	private static final long serialVersionUID = 6714014585805728867L;
+	
 	private Long id;
 	private String userName;
 	private String password;
